@@ -1,10 +1,9 @@
 <script setup></script>
 
-<template>
-</template>
+<template></template>
 
 <style>
-  *{
-    margin: 0;
-  }
+* {
+  margin: 0;
+}
 </style>
