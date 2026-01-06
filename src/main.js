@@ -18,7 +18,7 @@ const winh = window.innerHeight
 const scene = new Scene()
 // 相机
 const camera = new PerspectiveCamera(45, winw / winh, 0.1, 1000)
-camera.position.z = 1
+camera.position.set(0, 10, 25)
 // 渲染器
 const renderer = new WebGLRenderer({ antialias: true })
 renderer.setSize(winw, winh)
@@ -30,6 +30,7 @@ scene.add(axeshelper)
 // 轨道控制器
 const orb = new OrbitControls(camera, renderer.domElement)
 orb.enableDamping = true
+orb.target.y = 10
 // 网格
 const grid = new GridHelper(39, 39, 0xffffff)
 scene.add(grid)
@@ -47,7 +48,7 @@ floor.receiveShadow = true // 关键：允许接收阴影
 scene.add(floor)
 // 模型
 new MMDLoader().load(
-  '../public/YYB Hatsune Miku_10th/YYB Hatsune Miku_10th_v1.02.pmx',
+  '/YYB Hatsune Miku_10th/YYB Hatsune Miku_10th_v1.02.pmx',
   mesh => {
     // 允许投射阴影
     mesh.traverse(child => {
