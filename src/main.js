@@ -48,7 +48,7 @@ floor.receiveShadow = true // 关键：允许接收阴影
 scene.add(floor)
 // 模型
 new MMDLoader().load(
-  '/YYB Hatsune Miku_10th/YYB Hatsune Miku_10th_v1.02.pmx',
+  'YYB Hatsune Miku_10th/YYB Hatsune Miku_10th_v1.02.pmx',
   mesh => {
     // 允许投射阴影
     mesh.traverse(child => {

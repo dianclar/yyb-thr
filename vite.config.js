@@ -7,6 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [vue(), vueDevTools()],
+  base: './', // 使用相对路径
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
